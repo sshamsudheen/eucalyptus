@@ -9,7 +9,7 @@
 	
 	TO BE REMEMBERED
 
-	FOR BECLOC52, BECLOC53 BHCLOC53, AND BHCLOC54 $serviceName="CLCW" 
+	FOR cloudname52, cloudname53 BHCLOC53, AND BHCLOC54 $serviceName="CLCW" 
 	FOR ALL OTHER CLOUDS IT WILL BE $serviceName="CLC";
 
 */
@@ -37,26 +37,18 @@ function hours_diff_of_latest_backup_file($latestFileName)
 
 # list of cloud backups which need to be checked
 // clouds in espoo location
-/*$cloudArray=array("escloc10"=>"esclos10130.emea.nsn-net.net","escloc11"=>"esclos10200.emea.nsn-net.net",
-"escloc12"=>"esclos10271.emea.nsn-net.net","escloc14"=>"esclos14000.emea.nsn-net.net",
-"escloc57"=>"esclos50011.emea.nsn-net.net","escloc58"=>"esclos50078.emea.nsn-net.net",
-"escloc60"=>"esclos60000.emea.nsn-net.net", "escloc13"=>"esclos13000.emea.nsn-net.net");*/
 
 // clouds in beiging location
-$cloudArray	=	array("becloc53"=>"beclos53000.china.nsn-net.net","becloc52"=>"beclos72.china.nsn-net.net");
+$cloudArray	=	array("cloudname53"=>"cloudname53000.china.hostname","cloudname52"=>"cloudname72.china.hostname");
 
-// clouds in BANGLORE location
-//$cloudArray	=	array("bhcloc53"=>"bhclos80.apac.nsn-net.net","bhcloc54"=>"bhclos54000.apac.nsn-net.net");
 
-//$to     =       'shanmugam.ganesan.ext@nsn.com;jagannath.padhi.ext@nsn.com;samsudheen.saludheen.ext@nsn.com;rajesh.sekaran.ext@nsn.com;gunaseelan.ganesan.ext@nsn.com;santhosh.venkatraman.ext@nsn.com;lavanya.mohanasundaram.ext@nsn.com;kalpana.vilvajothy.ext@nsn.com;sudharsan.punniyakotti.ext@nsn.com;tejaashwine.m.ext@nsn.com;dinesh.a.a.ext@nsn.com;muthu_alagappan.muthu.ext@nsn.com;vishnu.priya_s.ext@nsn.com;bharadhwaj.ganesh.ext@nsn.com;yuvarani.parkunan.ext@nsn.com';
-
-$to	=	'samsudheen.saludheen.ext@nsn.com';
+$to	=	'samsudheen.saludheen.ext@gmail.com';
 
 foreach($cloudArray as $key => $val)
 {
         $cloudName	=	$key;
         $hostName	=	$val;
-		if($key=='becloc52' || $key=='bhcloc53')
+		if($key=='cloudname52' || $key=='bhcloc53')
 			$serviceName	=	"CLCW";
 		else
 			$serviceName	=	"CLC";
@@ -134,5 +126,5 @@ foreach($cloudArray as $key => $val)
 
         }
 }
-mail('samsudheen.saludheen.ext@nsn.com','backup check script executed in esclos64','backup check script executed in esclos64');
+mail('samsudheen.saludheen.ext@gmail.com','backup check script executed in esclos64','backup check script executed in esclos64');
 ?>
